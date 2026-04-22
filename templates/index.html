@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="/static/reset.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Calculadora de IMC</h1>
 
-    <label for="peso">Peso (kg):</label>
-    <input type="number" id="peso" step="0.01" placeholder="Ex: 70.5">
+    <main class="page">
+        <section class="container">
+            <h1>Calculadora de IMC</h1>
+            <p class="subtitle">Digite seus dados para calcular o índice de massa corporal.</p>
 
-    <br><br>
+            <div class="form-group">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" step="0.01" placeholder="Ex: 70.5">
+            </div>
 
-    <label for="altura">Altura (m):</label>
-    <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
+            <div class="form-group">
+                <label for="altura">Altura (m)</label>
+                <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
+            </div>
 
-    <br><br>
+            <button onclick="calcularIMC()">Calcular</button>
 
-    <button onclick="calcularIMC()">Calcular</button>
-
-    <h2>Resultado</h2>
-    <div id="resultado"></div>
+            <section class="result-box">
+                <h2>Resultado</h2>
+                <div id="resultado" class="resultado"></div>
+            </section>
+        </section>
+    </main>
 
     <script src="/static/script.js"></script>
 </body>
