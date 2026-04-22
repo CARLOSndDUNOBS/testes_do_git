@@ -61,3 +61,21 @@ Este projeto evoluiu de um código simples no terminal para uma aplicação web 
 ---
 
 ## 📁 Estrutura do projeto
+calculadora-imc/
+│
+├── main.py
+├── templates/
+│ └── index.html
+├── static/
+│ └── script.js
+├── venv/
+├── .gitignore
+└── README.md
+---
+
+## ⚙️ Como executar o projeto
+
+### 1. Clonar o repositório
+
+```bash
+git clone <URL_DO_REPOSITORIO>
