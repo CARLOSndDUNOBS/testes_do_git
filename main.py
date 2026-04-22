@@ -44,6 +44,9 @@ def calcular():
     peso = float(dados["peso"])
     altura = float(dados["altura"])
 
+    if peso <= 0 or altura <= 0:
+        return jsonify({"erro": "Peso e altura devem ser maiores que zero"})
+
     resultado = calcular_imc(peso, altura)
 
     return jsonify(resultado)
