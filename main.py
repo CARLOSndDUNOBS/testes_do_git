@@ -41,9 +41,17 @@ def home():
 def calcular():
     dados = request.json
 
-    peso = float(dados["peso"])
-    altura = float(dados["altura"])
+    try:
+        peso = float(dados["peso"].replace(",", "."))
+        altura = float(dados["altura"].replace(",", "."))
+    except:
+        return jsonify({"erro": "Digite valores numéricos válidos"})
 
+    if altura < 0.3:
+        return jsonify({"erro": "Está medindo o IMC do quê, um bulldog?"})
+    if altura > 4.0:
+        return jsonify({"erro": "Você está de brincadeira comigo!!! Seu arrombado 😂😂😂"})
+        
     if peso <= 0 or altura <= 0:
         return jsonify({"erro": "Peso e altura devem ser maiores que zero"})
 
