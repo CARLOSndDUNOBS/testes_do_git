@@ -5,13 +5,20 @@ Meu primeiro projeto usando Git e GitHub.
 ---
 
 ## 🎯 Objetivo
-Aprender versionamento com Git e GitHub enquanto desenvolvo projetos reais usando Python e Web.
+Aprender versionamento com Git e GitHub enquanto desenvolvo projetos reais utilizando Python e tecnologias Web.
 
 ---
 
 ## 🚀 Projeto Atual: Calculadora de IMC (Web)
 
-Este projeto evoluiu de um código simples no terminal para uma aplicação web completa utilizando Flask.
+Este projeto evoluiu de um código simples no terminal para uma aplicação web completa utilizando Flask, com integração entre frontend e backend e deploy online.
+
+---
+
+## 🌐 Deploy online
+
+A aplicação está disponível em:  
+https://testes-do-git.onrender.com
 
 ---
 
@@ -19,7 +26,7 @@ Este projeto evoluiu de um código simples no terminal para uma aplicação web 
 
 ### ✔️ Versão 1 — Terminal
 - Cálculo de IMC via `input()`
-- Classificação de acordo com o valor
+- Classificação baseada no resultado
 - Cálculo de peso ideal
 
 ---
@@ -30,23 +37,38 @@ Este projeto evoluiu de um código simples no terminal para uma aplicação web 
   - `mensagem_imc()`
   - `calcular_peso_ideal()`
   - `calcular_imc()`
-- Uso de dicionário para retornar múltiplos dados
+- Uso de dicionário para retorno estruturado
 
 ---
 
 ### ✔️ Versão 3 — Web com Flask
 - Criação de servidor com Flask
-- Rota `/` para renderizar HTML
-- Rota `/calcular` para receber dados e retornar resultado
+- Rota `/` para renderização do HTML
+- Rota `/calcular` para processamento dos dados
 
 ---
 
 ### ✔️ Versão 4 — Integração Front + Back
 - HTML com inputs de peso e altura
-- JavaScript para enviar dados (`fetch`)
-- Python recebendo dados com `request.json`
+- JavaScript utilizando `fetch` (requisição POST)
+- Backend recebendo dados via `request.json`
 - Retorno em JSON com `jsonify`
-- Exibição dinâmica do resultado na tela
+- Atualização dinâmica da interface
+
+---
+
+## 🚀 Funcionalidades
+
+- Cálculo de IMC em tempo real
+- Cálculo de peso ideal
+- Classificação automática
+- Validação de dados (frontend e backend)
+- Suporte a números com vírgula (ex: `1,75`)
+- Tratamento de erros
+- Interface responsiva
+- Animação suave nos resultados
+- Botão com estado de loading
+- Regra personalizada (altura absurda)
 
 ---
 
@@ -54,23 +76,30 @@ Este projeto evoluiu de um código simples no terminal para uma aplicação web 
 
 - Python
 - Flask
-- HTML
+- HTML5
+- CSS3
 - JavaScript
 - Git / GitHub
+- Render (deploy)
 
 ---
 
 ## 📁 Estrutura do projeto
+
+```
 calculadora-imc/
 │
 ├── main.py
 ├── templates/
-│ └── index.html
+│   └── index.html
 ├── static/
-│ └── script.js
-├── venv/
+│   ├── script.js
+│   ├── style.css
+│   └── reset.css
+├── requirements.txt
 ├── .gitignore
 └── README.md
+```
 ---
 
 ## ⚙️ Como executar o projeto
@@ -78,4 +107,4 @@ calculadora-imc/
 ### 1. Clonar o repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone <https://testes-do-git.onrender.com>

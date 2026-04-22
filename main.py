@@ -48,7 +48,7 @@ def calcular():
         return jsonify({"erro": "Digite valores numéricos válidos"})
 
     if altura < 0.3:
-        return jsonify({"erro": "Está medindo o IMC do quê, um bulldog?"})
+        return jsonify({"erro": "Está medindo oIMC do quê, um bulldog?"})
     if altura > 4.0:
         return jsonify({"erro": "Você está de brincadeira comigo!!! Seu arrombado 😂😂😂"})
         
