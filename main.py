@@ -15,18 +15,15 @@ def mensagem_imc(imc):
         return "Obesidade II"
     return "Obesidade III"
 
-IMC_Ideal = 24.9
-def calcular_peso_ideal(imc_ideal, altura):
-    peso_ideal = imc_ideal * (altura * altura)
-    return peso_ideal
+IMC_IDEAL = 24.9
 
-print("Utilize o ponto em vez da virgula para separar os decimais")
-peso = float(input("Digite seu peso: "))
-altura = float(input("Digite sua altura: "))
+def calcular_peso_ideal (imc_ideal, altura):
+    return imc_ideal * (altura * altura)
 
-imc = peso / (altura * altura)
-pesoIdeal = calcular_peso_ideal(IMC_Ideal, altura)
-
-print(f"Seu IMC e: {imc:.2f}")
-print(mensagem_imc(imc))
-print(f"Seu peso ideal e: {pesoIdeal:.2f} kg")
+def calcular_imc (peso, altura):
+    imc = peso / (altura * altura)
+    return{
+        "imc": round(imc, 2),
+        "mensagem": mensagem_imc(imc),
+        "peso_ideal": round(calcular_peso_ideal(IMC_IDEAL, altura), 2)
+    }
