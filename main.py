@@ -37,5 +37,16 @@ def calcular_imc (peso, altura):
 def home():
     return render_template("index.html")
 
+@app.route("/calcular", methods=["POST"])
+def calcular():
+    dados = request.json
+
+    peso = float(dados["peso"])
+    altura = float(dados["altura"])
+
+    resultado = calcular_imc(peso, altura)
+
+    return jsonify(resultado)
+
 if __name__ == "__main__":
     app.run(debug=True)
