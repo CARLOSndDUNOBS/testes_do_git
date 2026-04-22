@@ -107,4 +107,9 @@ calculadora-imc/
 ### 1. Clonar o repositório
 
 ```bash
+<<<<<<< HEAD
 git clone <https://github.com/CARLOSndDUNOBS/testes_do_git>
+=======
+git clone <(https://github.com/CARLOSndDUNOBS/testes_do_git)
+>
+>>>>>>> 9250d5a84455f6dbe4210d5425bebbc38989a8d3
