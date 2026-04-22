@@ -1,3 +1,6 @@
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
 def mensagem_imc(imc):
     if imc >= 186:
         return "Tu e mais gordo que o Jon Brower Minnoch, meu Deus!"
@@ -27,3 +30,12 @@ def calcular_imc (peso, altura):
         "mensagem": mensagem_imc(imc),
         "peso_ideal": round(calcular_peso_ideal(IMC_IDEAL, altura), 2)
     }
+
+# ===== ROTAS =====
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
